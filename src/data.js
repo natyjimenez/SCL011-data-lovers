@@ -1,10 +1,14 @@
-/* Manejo de data */
-
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-const example = () => {
-  return 'example';
-};
-
-window.example = example;
+window.dataPokemon = {
+  //Orden de aparición por horario
+      sortData: (data, sortBy, sortOrder) => {
+      let sorted = [];
+      if (sortBy == "spawn_time"){
+      if(sortOrder == "ascendente"){
+      sorted = data.sort((a, b) => a.spawn_time.localeCompare(b.spawn_time));
+      } else if (sortOrder == "descendente"){
+      sorted = data.sort((a, b) => a.spawn_time.localeCompare(b.spawn_time)).reverse();
+      } 
+      return sorted;
+      }
+    },
+  };

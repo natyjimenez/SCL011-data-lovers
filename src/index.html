@@ -2,18 +2,60 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>PokeMáster</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <!-- <script src="./data/patient/patient.js"></script> -->
-    <!-- <script src="./data/rickandmorty/rickandmorty.js"></script> -->
+    <div class="contenedor">
+  <!-- Cabecera -->
+        <header>
+        <nav>
+        <div class= "homeImg">
+          <ul><a href="index.html"><img src="img/pokeBanner.png" class="imgHome"></a> </ul>
+          </div>
+        </nav>
+        </header>
+  <!-- Contenido home -->
+        <div id ="headerInfo" class="headerInfo">
+        <h1 class= "titleHome">Bienvenido a PokeMáster!</h1>
+        <h2 class="InfoHome">Encuentra toda la información que necesitas de pokémon Go, y sé un maestro Pokémon!</h2>
+        </div>
+  <!-- Galería de pokemons -->
+        <section id = "allPokemons">
+        <div class="headerFilter">
+        <div class = "nav_options">
+        <img src="img/icone_filtro.png" class="iconeFiltro">
+        </div>        
+  <!-- Filtro orden horario   -->
+        <div>
+        <select name="slctOrder" id= "slctFilterOrder" class="search-box">
+        <option value="Order">Horario de aparición</option> 
+        <option value="00">AM-PM</option>
+        <option value="24">PM-AM</option>
+        </select> 
+        </div>
+  <!-- Filtro huevos -->
+        <div>
+        <select name="slctEgg" id= "slctFilterEgg" class="search-box">
+        <option value="huevos">Eclosiona de Huevos de</option> 
+        <option value="2 km">2 Km</option>
+        <option value="5 km">5 Km</option>
+        <option value="10 km">10 km</option>
+        <option value="Not in Eggs">no sale en huevos</option>
+        </select>
+        </div>
+        </div>        
+  <!-- Gallería -->
+        <div id="pokeStats" class="pokeStats"></div>
+  <!-- Tarjetas -->
+        <div id="pokeList" class="row"></div>
+        </section>
+  <!-- Pie de página -->
+        <footer>
+        <div id="footer1"><p>&copy; Copyright 2019</p></div>
+        </footer>
+        </div>  
+    <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
